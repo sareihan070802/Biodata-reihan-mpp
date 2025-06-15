@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biodata Sareihan</title>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100%;
+      background-color: #d35400;
+      padding-top: 60px;
+      transition: 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .sidebar a:hover {
+      background-color: #b84300;
+    }
+
+    .menu-icon {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      color: #d35400;
+      cursor: pointer;
+      z-index: 2000;
+    }
+
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+      transition: margin-left 0.3s ease;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #ffb200;
+      color: white;
+    }
+
+    header img {
+      width: 150px;
+      height: 200px;
+      border-radius: 12px;
+      border: 4px solid #fff;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+      margin-top: 10px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #d35400;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .social-icons a:hover {
+      color: #d35400;
+    }
+
+    .form-container {
+      background-color: #fafafa;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    input, select {
+      padding: 8px;
+      margin: 8px 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #d35400;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b84300;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 0;
+        padding-top: 0;
+        overflow: hidden;
+      }
+
+      .content {
+        margin-left: 0;
+      }
+
+      .sidebar.open {
+        width: 220px;
+        padding-top: 60px;
+      }
+
+      .content.shift {
+        margin-left: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-icon" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <a href="#beranda">Beranda</a>
+    <a href="#pribadi">Pribadi</a>
+    <a href="#biodata">Biodata</a>
+    <a href="#keahlian">Keahlian</a>
+    <a href="#karakter">Karakter</a>
+    <a href="#sekolah">Riwayat Sekolah</a>
+    <a href="#hobi">Hobi</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#sosial">Sosial</a>
+  </div>
+
+  <div class="content" id="mainContent">
+    <header id="beranda">
+      <h1>Biodata Sareihan</h1>
+      <img src="Sareihan.jpg" alt="Foto Sareihan">
+    </header>
+
+    <section id="pribadi">
+      <h2>Data Pribadi</h2>
+      <ul>
+        <li><b>Nama:</b> Sareihan Fariz Hermawan</li>
+        <li><b>Jenis Kelamin:</b> Laki-laki</li>
+        <li><b>Agama:</b> Islam</li>
+        <li><b>Kewarganegaraan:</b> Indonesia</li>
+      </ul>
+    </section>
+
+    <section id="biodata">
+      <h2>Biodata Lengkap</h2>
+      <ul>
+        <li><b>Tempat, Tanggal Lahir:</b> Batam, 7 Februari</li>
+        <li><b>Alamat:</b> Nongsa Pantai</li>
+        <li><b>Status:</b> Pelajar</li>
+      </ul>
+    </section>
+
+    <section id="keahlian">
+      <h2>Keahlian</h2>
+      <ul>
+        <li>Dasar-dasar jaringan telekomunikasi</li>
+        <li>Instalasi perangkat jaringan</li>
+        <li>Pengkabelan jaringan (fiber optik dan UTP)</li>
+        <li>Konfigurasi perangkat jaringan dasar (router, switch)</li>
+        <li>Pemahaman sistem komunikasi data</li>
+      </ul>
+    </section>
+
+    <section id="karakter">
+      <h2>Karakter</h2>
+      <ul>
+        <li>Disiplin</li>
+        <li>Bertanggung jawab</li>
+        <li>Baik</li>
+        <li>Suka menolong</li>
+      </ul>
+    </section>
+
+    <section id="sekolah">
+      <h2>Riwayat Sekolah</h2>
+      <ul>
+        <li>SD Negeri 01 Nongsa</li>
+        <li>SMP Negeri 8 Batam</li>
+        <li>SMK Negeri 7 Batam</li>
+      </ul>
+    </section>
+
+    <section id="hobi">
+      <h2>Hobi</h2>
+      <ul>
+        <li>Badminton</li>
+        <li>Berenang</li>
+        <li>Scroll TikTok</li>
+      </ul>
+    </section>
+
+    <section id="tentang">
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya Sareihan Fariz Hermawan, siswa SMK Negeri 7 Batam jurusan Teknik Jaringan Akses Telekomunikasi (TJAT), yang memiliki minat besar di bidang jaringan dan teknologi telekomunikasi. Saya dikenal sebagai pribadi yang antusias, disiplin, dan cepat belajar. Saya aktif mengasah kemampuan teknis seperti instalasi jaringan dan penyambungan kabel, serta mengembangkan soft skill seperti komunikasi dan kerja tim. Dengan semangat tinggi untuk terus belajar, saya siap berkontribusi di dunia industri secara profesional.
+      </p>
+    </section>
+
+    <section id="sosial">
+      <h2>Media Sosial</h2>
+      <div class="social-icons" id="social-icons">
+        <a href="https://www.instagram.com/nama_anda" target="_blank"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+        <a href="https://www.facebook.com/nama_anda" target="_blank"><i class="fab fa-facebook" aria-label="Facebook"></i></a>
+        <a href="https://wa.me/6281234567890" target="_blank"><i class="fab fa-whatsapp" aria-label="WhatsApp"></i></a>
+      </div>
+
+      <div class="form-container">
+        <h3>Tambahkan Media Sosial Anda:</h3>
+        <select id="platform">
+          <option value="instagram">Instagram</option>
+          <option value="facebook">Facebook</option>
+          <option value="whatsapp">WhatsApp</option>
+        </select>
+        <input type="text" id="username" placeholder="Username / No HP" />
+        <button onclick="addIcon()">Tambah</button>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Sareihan Fariz Hermawan. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const content = document.getElementById("mainContent");
+      sidebar.classList.toggle("open");
+      content.classList.toggle("shift");
+    }
+
+    function addIcon() {
+      const platform = document.getElementById('platform').value;
+      const username = document.getElementById('username').value.trim();
+      if (!username) {
+        alert("Username tidak boleh kosong!");
+        return;
+      }
+
+      if (platform === 'whatsapp' && username.replace(/\D/g, '').length < 10) {
+        alert("Nomor WhatsApp tidak valid!");
+        return;
+      }
+
+      let icon = '';
+      let url = '';
+
+      switch (platform) {
+        case 'instagram':
+          icon = 'fab fa-instagram';
+          url = `https://www.instagram.com/${username}`;
+          break;
+        case 'facebook':
+          icon = 'fab fa-facebook';
+          url = `https://www.facebook.com/${username}`;
+          break;
+        case 'whatsapp':
+          icon = 'fab fa-whatsapp';
+          url = `https://wa.me/${username.replace(/\D/g, '')}`;
+          break;
+      }
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.target = '_blank';
+      a.setAttribute('aria-label', platform);
+      a.innerHTML = `<i class="${icon}"></i>`;
+
+      document.getElementById('social-icons').appendChild(a);
+      document.getElementById('username').value = '';
+    }
+
+    document.getElementById('platform').addEventListener('change', function() {
+      const placeholderMap = {
+        instagram: 'Username Instagram',
+        facebook: 'Username Facebook',
+        whatsapp: 'Nomor WhatsApp (e.g. 62812xxxx)'
+      };
+      document.getElementById('username').placeholder = placeholderMap[this.value];
+    });
+  </script>
+</body>
+</html>
